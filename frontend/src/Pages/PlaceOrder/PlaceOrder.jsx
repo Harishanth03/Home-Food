@@ -1,8 +1,8 @@
 import React from 'react'
 
-import './Home.css'
+import './PlaceOrder.css'
 
-const Home = () => {
+const PlaceOrder = () => {
 
   return (
 
@@ -16,4 +16,4 @@ const Home = () => {
 
 }
 
-export default Home
+export default PlaceOrder
