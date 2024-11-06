@@ -3,17 +3,9 @@ import React from 'react'
 import './PlaceOrder.css'
 
 const PlaceOrder = () => {
-
   return (
-
-    <div>
-
-
-      
-    </div>
-
+    <div>PlaceOrder</div>
   )
-
 }
 
 export default PlaceOrder
