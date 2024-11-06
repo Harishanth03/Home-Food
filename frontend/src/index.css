@@ -13,7 +13,8 @@ body
   min-height: 100vh;
 }
 
-a{
+a
+{
   text-decoration: none;
   color: inherit;
 }
@@ -22,4 +23,6 @@ a{
 {
   width: 80%;
   margin: auto;
-}
+} 
+
+

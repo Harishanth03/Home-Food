@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import './Navbar.css'
 
-import {assets} from '../../assets/assets.js'
+import {assets} from "../../assets/assets.js"
 
 const Navbar = () => {
 
@@ -12,7 +12,7 @@ const Navbar = () => {
 
     <div className='navbar'>
 
-      <img src={assets.logo} alt="" className='logo'/>
+      <img src={assets.logo} className='logo'/>
 
       <ul className="navbar-menu">
 
@@ -44,6 +44,7 @@ const Navbar = () => {
       </div>
 
     </div>
+    
 
   )
 
