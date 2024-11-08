@@ -4,6 +4,7 @@ import Header from '../../components/Header/Header'
 
 import './Home.css'
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
+import FoodDisplay from '../../components/FoodDisply/FoodDisplay'
 
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
 
    <Header/>
 
-   <ExploreMenu category = {category} setCategory = {setCategory}/>
+   <ExploreMenu category = {category} setCategory = {setCategory} childern={<FoodDisplay category = {category}/>}/> 
 
    </div>
   )

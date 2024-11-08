@@ -58,14 +58,6 @@
     font-size: max(1vw , 16px);
 }
 
-.explore-menu hr
-{
-    margin: 5px 0;
-    height: 2px;
-    background-color: #e2e2e2;
-    border: none;
-}
-
 .explore-menu-list-item.active
 {
     border: 1px solid tomato;

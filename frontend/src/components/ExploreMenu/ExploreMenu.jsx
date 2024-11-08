@@ -5,7 +5,7 @@ import './ExploreMenu.css';
 import  {menu_list} from '../../assets/assets.js'
 
 
-const ExploreMenu = ({category , setCategory}) => {
+const ExploreMenu = ({category , setCategory , childern}) => {
 
   return (
 
@@ -35,9 +35,9 @@ const ExploreMenu = ({category , setCategory}) => {
 
             </div>
 
-            <hr />
-
         </div>
+
+        {childern}
 
     </section>
 
