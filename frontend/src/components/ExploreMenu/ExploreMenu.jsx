@@ -5,7 +5,7 @@ import './ExploreMenu.css';
 import  {menu_list} from '../../assets/assets.js'
 
 
-const ExploreMenu = () => {
+const ExploreMenu = ({category , setCategory}) => {
 
   return (
 
@@ -22,9 +22,9 @@ const ExploreMenu = () => {
 
                     return(
                         
-                        <div key={index} className='explore-menu-list-item'>
+                        <div onClick={() => setCategory(prev => prev === item.menu_name ? "All" : item.menu_name)} key={index}  className={`explore-menu-list-item ${category === item.menu_name ? "active" : ""}`}>
 
-                            <img src={item.menu_image} />
+                            <img  src={item.menu_image} />
 
                             <p>{item.menu_name}</p>
 
