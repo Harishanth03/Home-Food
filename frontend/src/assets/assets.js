@@ -119,122 +119,122 @@ export const menu_list = [
 export const food_list = [
     {
         _id: "1",
-        name: "Greek salad",
+        name: "Fish Rice",
         image: food_1,
-        price: 12,
+        price: 380,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        category: "Rice&Curry"
     },
     {
         _id: "2",
-        name: "Veg salad",
+        name: "Veg Rice",
         image: food_2,
-        price: 18,
+        price: 300,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        category: "Rice&Curry"
     }, {
         _id: "3",
-        name: "Clover Salad",
+        name: "Chicken Rice",
         image: food_3,
-        price: 16,
+        price: 400,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        category: "Rice&Curry"
     }, {
         _id: "4",
-        name: "Chicken Salad",
+        name: "Prown Rice",
         image: food_4,
-        price: 24,
+        price: 420,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        category: "Rice&Curry"
     }, {
         _id: "5",
-        name: "Lasagna Rolls",
+        name: "Kiri bath",
         image: food_5,
-        price: 14,
+        price: 150,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
+        category: "Kiri Bath"
     }, {
         _id: "6",
-        name: "Peri Peri Rolls",
+        name: "Kiribath With Sambol",
         image: food_6,
-        price: 12,
+        price: 200,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
+        category: "Kiri Bath"
     }, {
         _id: "7",
-        name: "Chicken Rolls",
+        name: "Meekiri Kiribath",
         image: food_7,
-        price: 20,
+        price: 300,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
+        category: "Kiri Bath"
     }, {
         _id: "8",
-        name: "Veg Rolls",
+        name: "Coconut Kiribath",
         image: food_8,
-        price: 15,
+        price: 100,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
+        category: "Kiri Bath"
     }, {
         _id: "9",
-        name: "Ripple Ice Cream",
+        name: "Egg Noodles",
         image: food_9,
-        price: 14,
+        price: 300,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
+        category: "Noodles"
     }, {
         _id: "10",
-        name: "Fruit Ice Cream",
+        name: "Veg Noodles Soup",
         image: food_10,
-        price: 22,
+        price: 300,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
+        category: "Noodles"
     }, {
         _id: "11",
-        name: "Jar Ice Cream",
+        name: "Prown Noodles",
         image: food_11,
-        price: 10,
+        price: 450,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
+        category: "Noodles"
     }, {
         _id: "12",
-        name: "Vanilla Ice Cream",
+        name: "Chicken Noodles",
         image: food_12,
-        price: 12,
+        price: 600,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
+        category: "Noodles"
     },
     {
         _id: "13",
-        name: "Chicken Sandwich",
+        name: "Masala Dosa",
         image: food_13,
-        price: 12,
+        price: 200,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        category: "Dosa"
     },
     {
         _id: "14",
-        name: "Vegan Sandwich",
+        name: "Vegan Dosa",
         image: food_14,
-        price: 18,
+        price: 220,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        category: "Dosa"
     }, {
         _id: "15",
-        name: "Grilled Sandwich",
+        name: "Grilled Dosa",
         image: food_15,
-        price: 16,
+        price: 150,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        category: "Dosa"
     }, {
         _id: "16",
-        name: "Bread Sandwich",
+        name: "Normal Dosa",
         image: food_16,
-        price: 24,
+        price: 100,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        category: "Dosa"
     }, {
         _id: "17",
-        name: "Cup Cake",
+        name: "Egg hoppers",
         image: food_17,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
