@@ -236,115 +236,115 @@ export const food_list = [
         _id: "17",
         name: "Egg hoppers",
         image: food_17,
-        price: 14,
+        price: 140,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
+        category: "Hoppers"
     }, {
         _id: "18",
-        name: "Vegan Cake",
+        name: "Hoppers with Rice",
         image: food_18,
-        price: 12,
+        price: 120,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
+        category: "Hoppers"
     }, {
         _id: "19",
-        name: "Butterscotch Cake",
+        name: "Hoppers with curry",
         image: food_19,
-        price: 20,
+        price: 200,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
+        category: "Hoppers"
     }, {
         _id: "20",
-        name: "Sliced Cake",
+        name: "Masala Hopper",
         image: food_20,
-        price: 15,
+        price: 150,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
+        category: "Hoppers"
     }, {
         _id: "21",
-        name: "Garlic Mushroom ",
+        name: "Veg Idly ",
         image: food_21,
-        price: 14,
+        price: 140,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        category: "Idly"
     }, {
         _id: "22",
-        name: "Fried Cauliflower",
+        name: "Fried Idly",
         image: food_22,
-        price: 22,
+        price: 220,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        category: "Idly"
     }, {
         _id: "23",
-        name: "Mix Veg Pulao",
+        name: "Mix Veg Idly",
         image: food_23,
-        price: 10,
+        price: 230,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        category: "Idly"
     }, {
         _id: "24",
-        name: "Rice Zucchini",
+        name: "Rice Idly",
         image: food_24,
-        price: 12,
+        price: 120,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        category: "Idly"
     },
     {
         _id: "25",
-        name: "Cheese Pasta",
+        name: "String Hoppers",
         image: food_25,
-        price: 12,
+        price: 8,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "String Hoppers"
     },
     {
         _id: "26",
-        name: "Tomato Pasta",
+        name: "S.H & Chicken",
         image: food_26,
-        price: 18,
+        price: 180,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "String Hoppers"
     }, {
         _id: "27",
-        name: "Creamy Pasta",
+        name: "Masala S.H",
         image: food_27,
-        price: 16,
+        price: 160,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "String Hoppers"
     }, {
         _id: "28",
-        name: "Chicken Pasta",
+        name: "Prown S.H",
         image: food_28,
-        price: 24,
+        price: 240,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "String Hoppers"
     }, {
         _id: "29",
-        name: "Buttter Noodles",
+        name: "Normal Kottu",
         image: food_29,
-        price: 14,
+        price: 390,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Kottu"
     }, {
         _id: "30",
-        name: "Veg Noodles",
+        name: "Chicken Kottu",
         image: food_30,
-        price: 12,
+        price: 600,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Kottu"
     }, {
         _id: "31",
-        name: "Somen Noodles",
+        name: "Veg Kottu",
         image: food_31,
-        price: 20,
+        price: 390,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Kottu"
     }, {
         _id: "32",
-        name: "Cooked Noodles",
+        name: "Grilled Kottu",
         image: food_32,
-        price: 15,
+        price: 700,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Kottu"
     }
 ]
