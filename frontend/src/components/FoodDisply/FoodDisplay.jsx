@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import './FoodDisplay.css'
 
 import { StoreContext } from '../../Context/StoreContext'
+
 import FoodItem from '../FoodItem/FoodItem';
 
 const FoodDisplay = ({category}) => {
@@ -19,11 +20,12 @@ const FoodDisplay = ({category}) => {
 
           {food_list.map((item , index) => {
 
-            if(category === "All" || category === food_list.category)
+            if(category === "All" || category == item.category)
             {
               
-              return <FoodItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image}/>
+              return <FoodItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image} />
 
+              console.log(food_list.category)
             }
 
           })}
