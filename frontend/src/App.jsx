@@ -1,31 +1,34 @@
-import React from 'react'
-import Navbar from './components/Navbar/Navbar'
-import {Route, Routes} from 'react-router-dom'
-import Home from './Pages/Home/Home.jsx'
-import Cart from './Pages/Cart/Cart.jsx'
-import PlaceOrder from './Pages/PlaceOrder/PlaceOrder.jsx'
-
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home/Home.jsx";
+import Cart from "./Pages/Cart/Cart.jsx";
+import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder.jsx";
 
 const App = () => {
 
   return (
+    
+    <>
 
-    <div className='app'>
+      <div className="app">
 
-      <Navbar/>
+        <Navbar />
 
-      <Routes>
+        <Routes>
 
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Cart' element={<Cart/>}/>
-        <Route path='/Order' element={<PlaceOrder/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/Order" element={<PlaceOrder />} />
 
-      </Routes>
+        </Routes>
 
-    </div>
+      </div>
 
-  )
-  
-}
+    </>
 
-export default App
+  );
+
+};
+
+export default App;
