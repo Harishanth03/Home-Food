@@ -45,3 +45,53 @@
     border-radius: 50px;
     cursor: pointer;
 }
+
+@media(max-width:1050px)
+{
+    .header
+    {
+        height: 38vw;
+    }
+
+    .header-content
+    {
+        max-width: 45%;
+        bottom: 15%;
+    }
+
+    .header-content p 
+    {
+        line-height: 20px;
+    }
+
+    .section-header
+    {
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:750px)
+{
+
+    .header-content
+    {
+        max-width: 65%;
+    }
+
+    .header-content p
+    {
+        display: none;
+    }
+
+    .header-content button 
+    {
+        padding: 2vw 4vw;
+    }
+
+    .section-header
+    {
+        margin-bottom: 10px;
+        padding-bottom: 0px;
+    }
+
+}
