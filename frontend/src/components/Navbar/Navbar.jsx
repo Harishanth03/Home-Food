@@ -5,7 +5,7 @@ import './Navbar.css'
 import {assets} from "../../assets/assets.js"
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
 
   const [menu , setMenu] = useState("home"); // set UseState for menu click and default underline is home
 
@@ -40,7 +40,7 @@ const Navbar = () => {
 
         </div>
 
-        <button>Sign in</button>
+        <button onClick={() => setShowLogin(prev => prev? false : true)}>Sign in</button>
 
       </div>
 
