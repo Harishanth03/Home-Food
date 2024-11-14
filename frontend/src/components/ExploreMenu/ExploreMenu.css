@@ -35,8 +35,10 @@
 
 .explore-menu-list-item
 {
-    width: 150px;
-    height: 188px;
+    width: 18%; /* Use percentage for flexibility */
+    min-width: 100px; /* Set a minimum width */
+    max-width: 150px; /* Set a maximum width */
+    padding: 10px;
     background-color: #F3F3F3;
     border-radius: 10px;
     text-align: center;
@@ -47,19 +49,43 @@
 
 .explore-menu-list-item img
 {
-    width: 7.5vw;
-    max-width: 100px;
+    width: 80%; /* Responsive image size */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100px; 
 }
 
 .explore-menu-list-item p
 {
     text-align: center;
-    padding-top: 18px;
-    font-size: max(1vw , 16px);
+    font-size: 1rem; /* Responsive font size */
+    margin-top: 5px;
 }
 
 .explore-menu-list-item.active
 {
     border: 1px solid tomato;
+}
+
+@media(max-width: 1050px)
+{
+    .explore-menu h1
+    {
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .explore-menu-text
+    {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .explore-menu-list-item
+    {
+        width: 30vw;
+        max-width:150px;
+        min-height: 150px;
+        padding: 10px 0;
+    }
 }
 

@@ -9,7 +9,7 @@ const ExploreMenu = ({category , setCategory , childern}) => {
 
   return (
 
-    <section>
+    <>
         <div className='explore-menu' id='explore-menu'>
 
             <h1>Explore Our Menu</h1>
@@ -39,7 +39,7 @@ const ExploreMenu = ({category , setCategory , childern}) => {
 
         {childern}
 
-    </section>
+    </>
 
   )
 
