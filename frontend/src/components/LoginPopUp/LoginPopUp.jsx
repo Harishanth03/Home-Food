@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import './LoginPopUp.css'
+
 import { assets } from '../../assets/assets';
 
 const LoginPopUp = ({setShowLogin}) => {
@@ -9,11 +10,11 @@ const LoginPopUp = ({setShowLogin}) => {
 
   return (
 
-    <div className='loginpopup'>
+    <div className='login-popup'>
 
      <form className="login-popup-container">
 
-        <div className="loginpopup-title">
+        <div className="login-popup-title">
 
             <h2>{currentState}</h2>
 
@@ -21,7 +22,7 @@ const LoginPopUp = ({setShowLogin}) => {
 
         </div>
 
-        <div className="loginpopup-input">
+        <div className="login-popup-input">
 
             {currentState === "Sign In" ? <></> : <input type="text" placeholder='Your Name' required />}
 
@@ -33,13 +34,14 @@ const LoginPopUp = ({setShowLogin}) => {
 
         <button>{currentState === "Sign Up" ? "Create Account" : "Sign In"}</button>
 
-        <div className="loginpopup-condition">
+        {currentState === "Sign Up" ? <div className="login-popup-condition">
 
-            <input type="checkbox" required />
+          <input type="checkbox" required />
 
-            <p>By Continuing, i agree to the terms of use & Privacy Policy</p>
+          <p>By Continuing, i agree to the terms of use & Privacy Policy</p>
 
-        </div>
+          </div> : <></>
+        }
 
         {currentState === "Sign In" ? <p>Create a new account? <span onClick={() => setCurrentState("Sign Up")}>Click Here</span></p> :  <p>Already have an account? <span onClick={() => setCurrentState("Sign In")}>Sign In</span></p>}
 
