@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 
 import {assets} from "../../assets/assets.js"
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -16,13 +17,13 @@ const Navbar = () => {
 
       <ul className="navbar-menu">
 
-        <li className={menu === "home" ? "active" : "" } onClick={() => setMenu("home")}>home</li>
+        <Link to='/' className={menu === "home" ? "active" : "" } onClick={() => setMenu("home")}>home</Link>
 
-        <li className={menu === "menu" ? "active" : "" } onClick={ () => setMenu("menu")}>menu</li>
+        <a href='#explore-menu' className={menu === "menu" ? "active" : "" } onClick={ () => setMenu("menu")}>menu</a>
 
-        <li className={menu === "mobile-app" ? "active" : ""} onClick={ () => setMenu("mobile-app")}>mobile-app</li>
+        <a href='#app-download' className={menu === "mobile-app" ? "active" : ""} onClick={ () => setMenu("mobile-app")}>mobile-app</a>
 
-        <li className={menu === "contact-us" ? "active" : ""} onClick={ () => setMenu("contact-us")}>Contact us</li>
+        <a href='#footer' className={menu === "contact-us" ? "active" : ""} onClick={ () => setMenu("contact-us")}>Contact us</a>
 
 
       </ul>

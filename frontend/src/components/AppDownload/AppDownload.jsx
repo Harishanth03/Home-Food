@@ -7,7 +7,7 @@ import {assets} from '../../assets/assets'
 const AppDownload = () => {
   return (
 
-    <div className="app-download">
+    <div className="app-download" id='app-download'>
 
         <p>For Better Experience Download <br /> <span className='color'>Food</span> & <span className='color'>Cool App</span></p>
 
