@@ -1,8 +1,9 @@
 import React from 'react'
 
 import './Footer.css'
+import { assets } from '../../assets/assets'
 
-import {assets} from '../../assets/assets'
+
 
 const Footer = () => {
   return (
@@ -19,8 +20,8 @@ const Footer = () => {
           <div className="footer-social-icon">
 
             <img src={assets.facebook_icon} />
-            <img src={assets.linkedin_icon} />
             <img src={assets.twitter_icon} />
+            <img src={assets.linkedin_icon} />
 
           </div>
 
