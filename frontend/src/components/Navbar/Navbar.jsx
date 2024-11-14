@@ -13,7 +13,7 @@ const Navbar = ({setShowLogin}) => {
 
     <div className='navbar'>
 
-      <img src={assets.logo} className='logo'/>
+      <Link to='/'><img src={assets.logo} className='logo'/></Link>
 
       <ul className="navbar-menu">
 
@@ -34,7 +34,7 @@ const Navbar = ({setShowLogin}) => {
 
         <div className="navbar-search-icon">
 
-          <img src={assets.basket_icon} alt="" />
+          <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
 
           <div className="dot"></div>
 
