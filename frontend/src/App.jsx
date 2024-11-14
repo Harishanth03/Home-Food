@@ -15,7 +15,7 @@ const App = () => {
     
     <>
 
-      {showLogin ? <LoginPopUp/> : <></>}
+      {showLogin ? <LoginPopUp setShowLogin = {setShowLogin}/> : <></>}
 
       <div className="app">
 

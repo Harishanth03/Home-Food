@@ -40,7 +40,7 @@ const Navbar = ({setShowLogin}) => {
 
         </div>
 
-        <button onClick={() => setShowLogin(prev => prev? false : true)}>Sign in</button>
+        <button onClick={() => setShowLogin(true)}>Sign in</button>
 
       </div>
 
