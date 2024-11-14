@@ -27,6 +27,11 @@
     gap: 30px;
 }
 
+.navbar-right img
+{
+    cursor: pointer;
+}
+
 .navbar button
 {
     background: transparent;
@@ -60,6 +65,11 @@
 .navbar-search-icon
 {
     position: relative;
+}
+
+.navbar-search-icon img
+{
+    cursor: pointer;
 }
 
 .navbar-search-icon .dot
