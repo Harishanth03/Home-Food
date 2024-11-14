@@ -73,3 +73,42 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
+.cart-promo-code
+{
+    flex: 1;
+}
+
+.cart-promo-code p 
+{
+    color: #555;
+}
+
+.cart-promo-code-input
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 4px;   
+}
+
+.cart-promo-code-input input
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.cart-promo-code-input button
+{
+    width: max(10vw , 150px);
+    padding: 12px 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
