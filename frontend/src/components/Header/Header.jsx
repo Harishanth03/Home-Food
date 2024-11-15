@@ -14,7 +14,7 @@ const Header = () => {
 
         <p>Craving a taste of home? Discover delicious, freshly-made dishes crafted with love and delivered right to your door. Dive into the comfort of homemade flavors today!</p>
 
-        <button>View Menu</button>
+        <a href='#explore-menu'><button>View Menu</button></a>
 
       </div>
 
