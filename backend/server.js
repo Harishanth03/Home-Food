@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 
 import { connectDb } from "./Config/db.js";
+import foodRouter from "./routes/foodRoute.js";
 
 //===================================================== APP CONFIG ==================================================================
 
@@ -19,7 +20,7 @@ app.use(cors());
 connectDb();
 
 //===================================================== API END POINT ==================================================================
-
+app.use("/api/food", foodRouter);
 //===================================================== TEST CONNECTION ==================================================================
 
 app.get("/" , (request , response ) => {
