@@ -35,4 +35,11 @@ const addFood = async (request , response) => {
 
 };
 
-export {addFood};
+//================================================= list all Food ================================================================
+
+const listFood = async(request , response) => {
+
+
+}
+
+export {addFood , listFood};
