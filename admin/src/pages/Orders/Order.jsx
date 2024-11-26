@@ -8,7 +8,6 @@ const Order = () => {
 
     <div>
 
-
     </div>
 
   )
