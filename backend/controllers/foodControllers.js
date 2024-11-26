@@ -7,7 +7,8 @@ const addFood = async (request , response) => {
 
     let image_filename = `${request.file.filename}`;
 
-    let food = new foodModel({
+    let food = new foodModel(
+    {
 
         name:request.body.name,
 
