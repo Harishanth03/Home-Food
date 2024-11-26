@@ -4,7 +4,9 @@ import "./Add.css"
 import { assets } from '../../assets/assets'
 
 const Add = () => {
+
   return (
+    
     <div className='add'>
 
       <form className='flex-col'>
@@ -70,7 +72,7 @@ const Add = () => {
 
         </div>
 
-        <button type='submit'>Add</button>
+        <button className='add-btn' type='submit'>Add</button>
         
       </form>
 
