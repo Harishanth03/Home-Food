@@ -8,16 +8,28 @@ const SideBar = () => {
 
     <div className='sidebar'>
         
-      <div className="sidebar-option">
+      <div className="sidebar-options">
         
-        <img src={assets.add_icon} alt="" />
-        <p>Add Items</p>
+        <div className="sidebar-option">
 
-        <img src={assets.order_icon} alt="" />
-        <p>List Items</p>
+          <img src={assets.add_icon} alt="" />
+          <p>Add Items</p>
+
+        </div>
+
+        <div className="sidebar-option">
+
+          <img src={assets.order_icon} alt="" />
+          <p>List Items</p>
+
+        </div>
         
-        <img src={assets.order_icon} alt="" />
-        <p>Orders</p>
+        <div className="sidebar-option">
+
+          <img src={assets.order_icon} alt="" />
+          <p>Orders</p>
+          
+        </div>
 
       </div>
 
