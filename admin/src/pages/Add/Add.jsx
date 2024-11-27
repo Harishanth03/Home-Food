@@ -30,11 +30,31 @@ const Add = () => {
 
   };
 
+  //========================================================== ONSUBMITHANDLER FUNCTION =============================================
+
+  const onSubmitHandler = async (event) => {
+
+    event.preventDefault(); //page doesnt reload
+
+    const formData = new FormData();
+
+    formData.append("name" , data.name)
+
+    formData.append("description" , data.description)
+
+    formData.append("category" , data.category)
+
+    formData.append("price" , Number(data.price))
+
+    formData.append("image" , imageData)
+
+  }
+
   return (
     
     <div className='add'>
 
-      <form className='flex-col'>
+      <form className='flex-col' onSubmit={onSubmitHandler}>
 
         <div className="add-image-upload flex-col">
 
@@ -46,7 +66,7 @@ const Add = () => {
 
           </label>
 
-          <input onChange={(e) => setImage(e.target.files[0])} type="file" name="" id="image" hidden required />
+          <input onChange={(e) => setImage(e.target.files[0])} type="file" name="image" id="image" hidden required />
 
         </div>
 
