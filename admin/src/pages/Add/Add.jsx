@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 
 import "./Add.css"
 import { assets } from '../../assets/assets'
+import axios from 'axios';
 
 const Add = () => {
+
+  const URL = "http://localhost:4000";
 
   const [ image , setImage ] = useState(false);
 
@@ -47,7 +50,31 @@ const Add = () => {
 
     formData.append("category" , data.category);
 
-    formData.append("image" , image)
+    formData.append("image" , image);
+
+    const response = await axios.post(`${URL}/api/food/add` , formData);
+
+    if(response.data.success)
+    {
+      setData(
+        {
+          name: "",
+    
+          description: "",
+    
+          price: "",
+    
+          category: "Dosa"
+    
+        }
+      );
+
+      setImage(false);
+    }
+    else
+    {
+
+    }
    
   }
 
@@ -93,7 +120,7 @@ const Add = () => {
 
             <p>Product Category</p>
 
-            <select onChange={onchangeHandler} name="category" >
+            <select onChange={onchangeHandler} value={data.category} name="category" >
 
               <option value="Rice&Curry">Rice&Curry</option>
               <option value="Kiri Bath">Kiri Bath</option>
