@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import "./Add.css"
 
@@ -29,8 +29,6 @@ const Add = () => {
     setData(data => ({...data,[name]:value}));
 
   };
-
-
 
   return (
     
