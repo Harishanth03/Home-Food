@@ -7,11 +7,55 @@ const Add = () => {
 
   const [ image , setImage ] = useState(false);
 
+  const [data , setData] = useState(
+    
+    {
+      name: "",
+
+      description: "",
+
+      price: "",
+
+      category: "Dosa"
+
+    }
+
+  );
+
+  const onchangeHandler = (event) => {
+
+    const name = event.target.name;
+
+    const value = event.target.value;
+
+    setData(data => ({...data , [name] : value}));
+
+  };
+
+  //======================================================== API CALL ==============================================================
+  const onSubmitHandler = async (event) => {
+
+    event.preventDefault();
+
+    const formData = new FormData();
+
+    formData.append("name" , data.name);
+
+    formData.append("description" , data.description);
+
+    formData.append("price" , Number(data.price));
+
+    formData.append("category" , data.category);
+
+    formData.append("image" , image)
+   
+  }
+
   return (
     
     <div className='add'>
 
-      <form className='flex-col'>
+      <form className='flex-col' onSubmit={onSubmitHandler}>
 
         <div className="add-image-upload flex-col">
 
@@ -31,7 +75,7 @@ const Add = () => {
 
           <p>product namme</p>
 
-          <input type="text" name='name' placeholder='Type here' />
+          <input type="text" onChange={onchangeHandler} name='name' value={data.name} placeholder='Type here' />
 
         </div>
 
@@ -39,7 +83,7 @@ const Add = () => {
 
           <p>Product Description</p>
 
-          <textarea name="description" rows="6" placeholder='Write Content Here' required></textarea>
+          <textarea onChange={onchangeHandler} name="description" value={data.description} rows="6" placeholder='Write Content Here' required></textarea>
 
         </div>
 
@@ -49,7 +93,7 @@ const Add = () => {
 
             <p>Product Category</p>
 
-            <select name="category" >
+            <select onChange={onchangeHandler} name="category" >
 
               <option value="Rice&Curry">Rice&Curry</option>
               <option value="Kiri Bath">Kiri Bath</option>
@@ -68,7 +112,7 @@ const Add = () => {
 
             <p>Product Price</p>
 
-            <input type="number" name='price' placeholder='LKR 100'/>
+            <input onChange={onchangeHandler} type="number" name='price' value={data.price} placeholder='LKR 100'/>
 
           </div>
 
