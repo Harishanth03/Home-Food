@@ -1,11 +1,12 @@
 import React from 'react'
 
 import "./Add.css"
+
 import { assets } from '../../assets/assets'
 
 const Add = () => {
 
-  //======================================================== API CALL ==============================================================
+
   return (
     
     <div className='add'>
