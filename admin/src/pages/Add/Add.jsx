@@ -28,7 +28,9 @@ const Add = () => {
 
     setData(data => ({...data,[name]:value}));
 
-  }
+  };
+
+
 
   return (
     
@@ -54,7 +56,7 @@ const Add = () => {
 
           <p>product namme</p>
 
-          <input type="text" name='name' placeholder='Type here' />
+          <input onChange={onChangeHandler} value={data.name} type="text" name='name' placeholder='Type here' />
 
         </div>
 
@@ -62,7 +64,7 @@ const Add = () => {
 
           <p>Product Description</p>
 
-          <textarea name="description" rows="6" placeholder='Write Content Here' required></textarea>
+          <textarea onChange={onChangeHandler} value={data.description} name="description" rows="6" placeholder='Write Content Here' required></textarea>
 
         </div>
 
@@ -72,7 +74,7 @@ const Add = () => {
 
             <p>Product Category</p>
 
-            <select name="category">
+            <select onChange={onChangeHandler} value={data.category} name="category">
 
               <option value="Rice&Curry">Rice&Curry</option>
               <option value="Kiri Bath">Kiri Bath</option>
@@ -91,7 +93,7 @@ const Add = () => {
 
             <p>Product Price</p>
 
-            <input type="number" name='price' placeholder='LKR 100'/>
+            <input onChange={onChangeHandler} value={data.price} type="number" name='price' placeholder='LKR 100'/>
 
           </div>
 
