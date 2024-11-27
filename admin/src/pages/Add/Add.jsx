@@ -8,6 +8,18 @@ const Add = () => {
 
   const [imageData , setImage] = useState(false);
 
+  const [data , setData] = useState({
+    name: "",
+
+    description: "",
+
+    price: "",
+
+    category: "Rice&Curry"
+  });
+
+  //========================================================== OnchangeHandler =======================================================
+
   return (
     
     <div className='add'>
@@ -20,7 +32,7 @@ const Add = () => {
 
           <label htmlFor="image">
 
-            <img src={imageData?URL.createObjectURL(imageData)  :assets.upload_area} alt=''/>
+            <img src={imageData?URL.createObjectURL(imageData):assets.upload_area} alt=''/>
 
           </label>
 
@@ -50,7 +62,7 @@ const Add = () => {
 
             <p>Product Category</p>
 
-            <select name="category" >
+            <select name="category">
 
               <option value="Rice&Curry">Rice&Curry</option>
               <option value="Kiri Bath">Kiri Bath</option>
