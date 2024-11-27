@@ -3,7 +3,7 @@ import React from 'react'
 import "./SideBar.css";
 
 import { assets } from '../../assets/assets';
-import { NavLink } from 'react-router-dom';
+import { NavLink , useLocation } from 'react-router-dom';
 
 const SideBar = () => {
 
@@ -13,7 +13,7 @@ const SideBar = () => {
         
       <div className="sidebar-options">
         
-        <NavLink to='/add' className="sidebar-option">
+        <NavLink to='/add' className={({isActive}) => isActive || location.pathname  === '/' ? 'sidebar-option active' : 'sidebar-option'}>
 
           <img src={assets.add_icon} alt="" />
 

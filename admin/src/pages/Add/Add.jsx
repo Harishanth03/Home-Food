@@ -6,7 +6,6 @@ import { assets } from '../../assets/assets'
 
 const Add = () => {
 
-
   return (
     
     <div className='add'>
