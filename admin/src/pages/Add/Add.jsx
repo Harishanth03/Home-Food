@@ -1,88 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import "./Add.css"
 import { assets } from '../../assets/assets'
-import axios from 'axios';
 
 const Add = () => {
 
-  const URL = "http://localhost:4000";
-
-  const [ image , setImage ] = useState(false);
-
-  const [data , setData] = useState(
-    
-    {
-      name: "",
-
-      description: "",
-
-      price: "",
-
-      category: "Dosa"
-
-    }
-
-  );
-
-  const onchangeHandler = (event) => {
-
-    const name = event.target.name;
-
-    const value = event.target.value;
-
-    setData(data => ({...data , [name] : value}));
-
-  };
-
   //======================================================== API CALL ==============================================================
-  const onSubmitHandler = async (event) => {
-
-    event.preventDefault();
-
-    const formData = new FormData();
-
-    formData.append("name" , data.name);
-
-    formData.append("description" , data.description);
-
-    formData.append("price" , Number(data.price));
-
-    formData.append("category" , data.category);
-
-    formData.append("image" , image);
-
-    const response = await axios.post(`${URL}/api/food/add` , formData);
-
-    if(response.data.success)
-    {
-      setData(
-        {
-          name: "",
-    
-          description: "",
-    
-          price: "",
-    
-          category: "Dosa"
-    
-        }
-      );
-
-      setImage(false);
-    }
-    else
-    {
-
-    }
-   
-  }
-
   return (
     
     <div className='add'>
 
-      <form className='flex-col' onSubmit={onSubmitHandler}>
+      <form className='flex-col'>
 
         <div className="add-image-upload flex-col">
 
@@ -90,11 +18,11 @@ const Add = () => {
 
           <label htmlFor="image">
 
-            <img src={image ? URL.createObjectURL(image) : assets.upload_area}/>
+            <img src={assets.upload_area} alt=''/>
 
           </label>
 
-          <input onChange={(e) => setImage(e.target.files[0])} type="file" name="" id="image" hidden required />
+          <input type="file" name="" id="image" hidden required />
 
         </div>
 
@@ -102,7 +30,7 @@ const Add = () => {
 
           <p>product namme</p>
 
-          <input type="text" onChange={onchangeHandler} name='name' value={data.name} placeholder='Type here' />
+          <input type="text" name='name' placeholder='Type here' />
 
         </div>
 
@@ -110,7 +38,7 @@ const Add = () => {
 
           <p>Product Description</p>
 
-          <textarea onChange={onchangeHandler} name="description" value={data.description} rows="6" placeholder='Write Content Here' required></textarea>
+          <textarea name="description" rows="6" placeholder='Write Content Here' required></textarea>
 
         </div>
 
@@ -120,7 +48,7 @@ const Add = () => {
 
             <p>Product Category</p>
 
-            <select onChange={onchangeHandler} value={data.category} name="category" >
+            <select name="category" >
 
               <option value="Rice&Curry">Rice&Curry</option>
               <option value="Kiri Bath">Kiri Bath</option>
@@ -139,7 +67,7 @@ const Add = () => {
 
             <p>Product Price</p>
 
-            <input onChange={onchangeHandler} type="number" name='price' value={data.price} placeholder='LKR 100'/>
+            <input type="number" name='price' placeholder='LKR 100'/>
 
           </div>
 
