@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import "./Add.css"
 
 import { assets } from '../../assets/assets'
 
 const Add = () => {
+
+  const [imageData , setImage] = useState(false);
 
   return (
     
@@ -18,11 +20,11 @@ const Add = () => {
 
           <label htmlFor="image">
 
-            <img src={assets.upload_area} alt=''/>
+            <img src={imageData?URL.createObjectURL(imageData)  :assets.upload_area} alt=''/>
 
           </label>
 
-          <input type="file" name="" id="image" hidden required />
+          <input onChange={(e) => setImage(e.target.files[0])} type="file" name="" id="image" hidden required />
 
         </div>
 
