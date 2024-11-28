@@ -17,6 +17,21 @@ const loginUser = async (request , response) => {
 
 const registerUser = async (request , response) => {
 
+    const {name , passWord , email} = request.body;
+
+    try
+    {
+        const exists = await userModel.findOne({email});
+
+        if(exists)
+        {
+            return response.json({success:false , message:"User already register"});
+        }
+    }
+    catch(error)
+    {
+
+    }
 
 }
 
