@@ -3,7 +3,10 @@ import express from "express";
 import cors from "cors";
 
 import { connectDb } from "./Config/db.js";
+
 import foodRouter from "./routes/foodRoute.js";
+
+import userRouter from "./routes/UserRoute.js";
 
 //===================================================== APP CONFIG ==================================================================
 
@@ -20,8 +23,11 @@ app.use(cors());
 connectDb();
 
 //===================================================== API END POINT ==================================================================
+
 app.use("/api/food", foodRouter);
-app.use("/images" , express.static('uploads'))
+app.use("/images" , express.static('uploads'));
+app.use("/api/user", userRouter);
+
 //===================================================== TEST CONNECTION ==================================================================
 
 app.get("/" , (request , response ) => {
