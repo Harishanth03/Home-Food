@@ -27,6 +27,13 @@ const registerUser = async (request , response) => {
         {
             return response.json({success:false , message:"User already register"});
         }
+
+        if(!validator.isEmail(email))
+        {
+            return response.json({success:false , message:"Please enter valied Email"});
+        }
+
+        
     }
     catch(error)
     {
