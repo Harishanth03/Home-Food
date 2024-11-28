@@ -33,6 +33,27 @@ const registerUser = async (request , response) => {
             return response.json({success:false , message:"Please enter valied Email"});
         }
 
+        if(passWord.length < 8)
+        {
+            response.json({success:false , message:"Please enter strong password"});
+        }
+
+        const salt = await bycrypt.genSalt(10)
+
+        const hasedPassword = await bycrypt.hash(passWord , salt);
+
+        const newUser = new userModel(
+            {
+                name: name,
+
+                email: email,
+
+                passWord: hasedPassword
+            }
+        );
+
+        const user =  await newUser.save();
+
         
     }
     catch(error)
