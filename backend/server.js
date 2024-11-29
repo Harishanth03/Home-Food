@@ -8,6 +8,8 @@ import foodRouter from "./routes/foodRoute.js";
 
 import userRouter from "./routes/UserRoute.js";
 
+import "dotenv/config.js"
+
 //===================================================== APP CONFIG ==================================================================
 
 const app = express();

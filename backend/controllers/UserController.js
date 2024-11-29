@@ -13,6 +13,11 @@ const loginUser = async (request , response) => {
 
 }
 
+const createToken = (id) => {
+
+    return jsonWebToken.sign({id} , process.env.JWT_SECRET);
+}
+
 //=================================================== REGISTER USERBFUNCTION =========================================================
 
 const registerUser = async (request , response) => {
@@ -54,11 +59,16 @@ const registerUser = async (request , response) => {
 
         const user =  await newUser.save();
 
+        const token = createToken(user._id);
+
+        response.json({success:true , token});
+
         
     }
     catch(error)
     {
-
+        console.log(error);
+        response.json({success:false , message:"Error"});
     }
 
 }
