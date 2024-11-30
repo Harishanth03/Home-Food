@@ -16,7 +16,16 @@ const LoginPopUp = ({setShowLogin}) => {
 
       password:""
 
-    })
+    });
+
+    const onChangeHandler = (event) => {
+
+      const name = event.target.name;
+
+      const value = event.target.value;
+
+      setData(previesData => ({...previesData, [name]: value}));
+    };
 
   return (
 
@@ -34,11 +43,11 @@ const LoginPopUp = ({setShowLogin}) => {
 
         <div className="login-popup-input">
 
-            {currentState === "Sign In" ? <></> : <input type="text" placeholder='Your Name' required />}
+            {currentState === "Sign In" ? <></> : <input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Your Name' required />}
 
-            <input type="text" placeholder='Your Email' required />
+            <input name='email' onChange={onChangeHandler} value={data.email} type="text" placeholder='Your Email' required />
 
-            <input type="password" placeholder='Password' required />
+            <input type="password" name='password' onChange={onChangeHandler} value={data.password} placeholder='Password' required />
 
         </div>
 
