@@ -10,6 +10,35 @@ import validator from "validator"; // validate the email
 
 const loginUser = async (request , response) => {
 
+    const {email , password} = request.body;
+
+    try
+    {
+        const user = await userModel.findOne({email});
+
+        if(!user)
+        {
+           return response.json({success:false , message:`User Doesn't exist in the ${email}`});
+        }
+
+        const isMatch = await bycrypt.compare(password , user.password);
+
+       if(!isMatch)
+       {
+           return response.json({success:false , message:"Invalied Password"})
+       }
+
+        const token = createToken(user._id);
+
+        response.json({success:true , token});
+
+    }
+    catch(error)
+    {
+        console.log(error);
+
+        response.json({success:false , message:"Error"});
+    }
 
 }
 
