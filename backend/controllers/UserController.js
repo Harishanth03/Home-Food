@@ -22,7 +22,7 @@ const createToken = (id) => {
 
 const registerUser = async (request , response) => {
 
-    const {name , passWord , email} = request.body;
+    const {name , password , email} = request.body;
 
     try
     {
@@ -38,14 +38,14 @@ const registerUser = async (request , response) => {
             return response.json({success:false , message:"Please enter valied Email"});
         }
 
-        if(passWord.length < 8)
+        if(password.length < 8)
         {
             response.json({success:false , message:"Please enter strong password"});
         }
 
         const salt = await bycrypt.genSalt(10)
 
-        const hasedPassword = await bycrypt.hash(passWord , salt);
+        const hasedPassword = await bycrypt.hash(password , salt);
 
         const newUser = new userModel(
             {
@@ -53,7 +53,7 @@ const registerUser = async (request , response) => {
 
                 email: email,
 
-                passWord: hasedPassword
+                password: hasedPassword
             }
         );
 
