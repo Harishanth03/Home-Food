@@ -8,6 +8,16 @@ const LoginPopUp = ({setShowLogin}) => {
 
     const [currentState , setCurrentState] = useState('Sign Up');
 
+    const [data , setData] = useState({
+
+      name:"",
+
+      email:"",
+
+      password:""
+
+    })
+
   return (
 
     <div className='login-popup'>
