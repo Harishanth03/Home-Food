@@ -8,6 +8,10 @@ const StoreContextProvider = (props) => {
 
     const [cartItem , storecartItem] = useState({});
 
+    const urlLocal = "http://localhost:4000";
+
+    const [token , setToken] = useState("");
+
     const addToCart = itemId => 
     {
         if(!cartItem[itemId])
@@ -53,7 +57,10 @@ const StoreContextProvider = (props) => {
         storecartItem,
         addToCart,
         removeFromCart,
-        getTotalCartAmount
+        getTotalCartAmount,
+        urlLocal,
+        token,
+        setToken
         
     }
     return (

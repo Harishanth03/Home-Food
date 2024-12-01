@@ -1,12 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 import './LoginPopUp.css'
 
 import { assets } from '../../assets/assets';
 
+import { StoreContext } from '../../Context/StoreContext';
+
+import axios from 'axios';
+
+
+
 const LoginPopUp = ({setShowLogin}) => {
 
-    const [currentState , setCurrentState] = useState('Sign Up');
+    const {urlLocal} = useContext(StoreContext);
+
+    const [currentState , setCurrentState] = useState('Sign In');
 
     const [data , setData] = useState({
 
@@ -27,11 +35,35 @@ const LoginPopUp = ({setShowLogin}) => {
       setData(previesData => ({...previesData, [name]: value}));
     };
 
+    const onLogin = async(event) => {
+
+      event.preventDefault();
+
+      let newUrl = urlLocal;
+
+      if(currentState === "Sign In")
+      {
+        newUrl += "/api/user/login";
+      }
+      else
+      {
+        newUrl =+ "/api/user/register";
+      }
+
+      const response = await axios.post(newUrl , data);
+
+      if(response.data.success)
+      {
+        
+      }
+
+    }
+
   return (
 
     <div className='login-popup'>
 
-     <form className="login-popup-container">
+     <form className="login-popup-container" onSubmit={onLogin}>
 
         <div className="login-popup-title">
 
@@ -51,7 +83,7 @@ const LoginPopUp = ({setShowLogin}) => {
 
         </div>
 
-        <button>{currentState === "Sign Up" ? "Create Account" : "Sign In"}</button>
+        <button type='submit'>{currentState === "Sign Up" ? "Create Account" : "Sign In"}</button>
 
         {currentState === "Sign Up" ? <div className="login-popup-condition">
 
