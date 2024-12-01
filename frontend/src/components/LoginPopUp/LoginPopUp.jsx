@@ -12,7 +12,7 @@ import axios from 'axios';
 
 const LoginPopUp = ({setShowLogin}) => {
 
-    const {urlLocal} = useContext(StoreContext);
+    const {urlLocal , setToken} = useContext(StoreContext);
 
     const [currentState , setCurrentState] = useState('Sign In');
 
@@ -47,15 +47,22 @@ const LoginPopUp = ({setShowLogin}) => {
       }
       else
       {
-        newUrl =+ "/api/user/register";
+        newUrl += "/api/user/register";
       }
 
       const response = await axios.post(newUrl , data);
 
       if(response.data.success)
       {
-        
+        setToken(response.data.token);
+        localStorage.setItem("token" , response.data.token);
+        setShowLogin(false);
       }
+      else
+      {
+        alert(response.data.message)
+      }
+
 
     }
 
