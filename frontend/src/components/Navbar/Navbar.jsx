@@ -4,7 +4,7 @@ import './Navbar.css'
 
 import {assets} from "../../assets/assets.js";
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { StoreContext } from '../../Context/StoreContext';
 
@@ -13,6 +13,22 @@ const Navbar = ({setShowLogin}) => { //set show login is appear that why when us
   const [menu , setMenu] = useState("home"); // set UseState for menu click and default underline is home
 
   const {getTotalCartAmount , token , setToken} = useContext(StoreContext);
+
+  //Logout code====================================================================================================================
+
+  const navigate = useNavigate();
+
+  const logOut = () => {
+
+    localStorage.removeItem("token");
+    
+    setToken("");
+
+    navigate('/');
+
+  }
+
+  
 
   return (
 
@@ -59,7 +75,7 @@ const Navbar = ({setShowLogin}) => { //set show login is appear that why when us
 
             <hr />
 
-            <li > <img src={assets.logout_icon} alt="" /> <p>Logout</p> </li>
+            <li onClick={logOut}> <img src={assets.logout_icon} alt="" /> <p>Logout</p> </li>
 
           </ul>
 
