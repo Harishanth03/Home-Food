@@ -2,8 +2,10 @@ import React, { useContext, useState } from 'react'
 
 import './Navbar.css'
 
-import {assets} from "../../assets/assets.js"
+import {assets} from "../../assets/assets.js";
+
 import { Link } from 'react-router-dom';
+
 import { StoreContext } from '../../Context/StoreContext';
 
 const Navbar = ({setShowLogin}) => { //set show login is appear that why when user click the signin the setshow login became true
