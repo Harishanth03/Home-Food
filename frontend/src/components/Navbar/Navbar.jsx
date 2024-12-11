@@ -12,7 +12,7 @@ const Navbar = ({setShowLogin}) => { //set show login is appear that why when us
 
   const [menu , setMenu] = useState("home"); // set UseState for menu click and default underline is home
 
-  const {getTotalCartAmount} = useContext(StoreContext);
+  const {getTotalCartAmount , token , setToken} = useContext(StoreContext);
 
   return (
 
@@ -45,7 +45,27 @@ const Navbar = ({setShowLogin}) => { //set show login is appear that why when us
 
         </div>
 
-        <button onClick={() => setShowLogin(true)}>Sign in</button>
+        {/* Set User icon after the user created account */}
+
+        {!token ? <button onClick={() => setShowLogin(true)}>Sign in</button> :
+
+        <div className='navbar-profile'> 
+
+          <img src={assets.profile_icon} alt="" />
+
+          <ul className="nav-profile-dropdown">
+
+            <li > <img src={assets.bag_icon} alt="" /> <p>Order</p> </li>
+
+            <hr />
+
+            <li > <img src={assets.logout_icon} alt="" /> <p>Logout</p> </li>
+
+          </ul>
+
+        </div>}
+
+        
 
       </div>
 
