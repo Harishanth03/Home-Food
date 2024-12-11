@@ -10,7 +10,7 @@ const FoodItem = ({id , name , price , description , image}) => {
 
   // const [itemCount , setItemCount] = useState(0);
 
-  const {cartItem , addToCart , removeFromCart} = useContext(StoreContext)
+  const {cartItem , addToCart , removeFromCart , urlLocal} = useContext(StoreContext)
 
   return (
 
@@ -18,7 +18,7 @@ const FoodItem = ({id , name , price , description , image}) => {
 
       <div className="food-item-img-container">
 
-        <img className='food-item-image' src={image}alt="" />
+        <img className='food-item-image' src={urlLocal+"/images/"+image}alt="" />
 
         {!cartItem[id] 
 
