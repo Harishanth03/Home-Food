@@ -8,7 +8,9 @@ import foodRouter from "./routes/foodRoute.js";
 
 import userRouter from "./routes/UserRoute.js";
 
-import "dotenv/config.js"
+import "dotenv/config.js";
+
+import cartRouter from "./routes/CartRoute.js";
 
 //===================================================== APP CONFIG ==================================================================
 
@@ -29,6 +31,7 @@ connectDb();
 app.use("/api/food", foodRouter);
 app.use("/images" , express.static('uploads'));
 app.use("/api/user", userRouter);
+app.use("/api/cart" , cartRouter);
 
 //===================================================== TEST CONNECTION ==================================================================
 
