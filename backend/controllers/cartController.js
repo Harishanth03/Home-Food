@@ -20,5 +20,8 @@ const removeCart = async(request , response) => {
 
 const getcart = async(request , response) => {
 
-    
+
 }
+
+
+export {addTocart , removeCart , getcart}
