@@ -32,9 +32,14 @@ const StoreContextProvider = (props) => {
         }
     }
 
-    const removeFromCart = (itemId) =>
+    const removeFromCart = async (itemId) =>
     {
         storecartItem(prev => ({...prev , [itemId]:prev[itemId] - 1}))
+
+        if(token)
+        {
+            await axios.post(urlLocal + "/api/cart/remove" , {itemId} , {headers:{token}});
+        }
     }
 
     //==================================================================================================================================
