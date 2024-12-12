@@ -64,37 +64,24 @@ const removeCart = async(request , response) => {
 
 }
 
-// const removeCart = async (req, res) => {
-//     try {
-//         // Fetch user data from the database based on userId
-//         let userData = await userModel.findById(req.body.userId);
-
-//         // Get the cartData for the user
-//         let cartData = userData.cartData;
-
-//         // Check if the item exists in the cart and its quantity is greater than 0
-//         if (cartData[req.body.itemId] > 0) {
-//             cartData[req.body.itemId] -= 1; // Decrease the item quantity by 1
-//         }
-
-//         // Update the user document with the modified cartData
-//         await userModel.findByIdAndUpdate(req.body.userId, { cartData });
-
-//         // Send a success response
-//         res.json({ success: true, message: "Removed From Cart" });
-//     } catch (error) {
-//         // If an error occurs, log it and send a failure response
-//         console.log(error);
-//         res.json({ success: false, message: "Error" });
-//     }
-// };
-
-
 //========================================================= Frtch User Cart Data ===========================================
 
 const getcart = async(request , response) => {
 
+    try 
+    {
 
+        let userData = await userModel.findById(request.body.userId);
+
+        let cartData = await userData.cartData;
+
+        response.json({success:true , cartData})
+        
+    } catch (error) 
+    {
+        console.log(error);
+        response.json({success:false , message:"Error"});
+    }
 }
 
 
