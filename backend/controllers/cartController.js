@@ -75,7 +75,7 @@ const getcart = async(request , response) => {
 
         let cartData = await userData.cartData;
 
-        response.json({success:true , cartData})
+        response.json({success:true , cartData});
         
     } catch (error) 
     {
