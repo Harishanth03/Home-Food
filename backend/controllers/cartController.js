@@ -44,14 +44,14 @@ const removeCart = async(request , response) => {
         //1st get the UserData
         let userData = await userModel.findById(request.body.userId);
         //then got the CartItem
-        let CartData = await userData.cartData;
+        let cartData = await userData.cartData;
         //Check if cartItem available or not
-        if(CartData[request.body.itemId] > 0)
+        if(cartData[request.body.itemId] > 0)
         {
-            CartData[request.body.itemId] -= 1;
+            cartData[request.body.itemId] -= 1;
         }
 
-        await userModel.findByIdAndUpdate(request.body.userId , {CartData});
+        await userModel.findByIdAndUpdate(request.body.userId , {cartData});
 
         response.json({success:true , message:"Removed from Cart"})
 
