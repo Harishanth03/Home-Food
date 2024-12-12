@@ -15,7 +15,7 @@ const StoreContextProvider = (props) => {
 
 
 
-    const addToCart = itemId => 
+    const addToCart = async itemId => 
     {
         if(!cartItem[itemId])
         {
@@ -24,6 +24,11 @@ const StoreContextProvider = (props) => {
         else
         {
             storecartItem((prev) => ({...prev,[itemId]:prev[itemId] + 1})) // get the all data using spread operator and select the prev quantity using Id and add + 1 to the cart
+        }
+
+        if(token)
+        {
+            await axios.post(urlLocal + "/api/cart/add" , {itemId} , {headers:{token}});
         }
     }
 
