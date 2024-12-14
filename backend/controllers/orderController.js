@@ -17,32 +17,32 @@ const placeOrder = async(request , response) => {
     try 
     {
         const newOrder = new orderModel({
-            userId:response.body.userId,
-            items:response.body.items,
-            amount:response.body.amount
+            userId:request.body.userId,
+            items:request.body.items,
+            amount:request.body.amount
         });
 
         await newOrder.save();
-        await userModel.findByIdAndUpdate(response.body.userId , {cartData:{}});
+        await userModel.findByIdAndUpdate(request.body.userId , {cartData:{}});
 
         const line_items = request.body.items.map((item) => ({
             price_data:{
-                currency:"inr",
+                currency:"lkr",
                 product_data:{
                     name:item.name,
                 },
-                unit_amount:item.price*100*80
+                unit_amount:item.price*100
             },
             quantity:item.quantity
         }))
 
         line_items.push({
             price_data:{
-                currency:"inr",
+                currency:"lkr",
                 product_data:{
                     name:"Delivery Charges",
                 },
-                unit_amount:2*100*80
+                unit_amount:200
             },
             quantity:1
         })
@@ -50,8 +50,8 @@ const placeOrder = async(request , response) => {
         const session = await stripe.checkout.sessions.create({
             line_items:line_items,
             mode:'payment',
-            success_url:`${frontend_url}/verify?success=true&orderId=${newOrder._Id}`,
-            cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._Id}`
+            success_url:`${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
+            cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`
         })
 
         response.json({success:true , session_url:session.url});
