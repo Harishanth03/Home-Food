@@ -6,4 +6,8 @@ import authMiddleWare from "../middleware/auth.js";
 
 const orderRouter = express.Router();
 
-orderRouter.post("/place" , authMiddleWare , placeOrder)
+orderRouter.post("/place" , authMiddleWare , placeOrder);
+
+
+
+export default orderRouter;
