@@ -12,6 +12,8 @@ import "dotenv/config.js";
 
 import cartRouter from "./routes/CartRoute.js";
 
+import orderRouter from "./routes/orderRoute.js";
+
 //===================================================== APP CONFIG ==================================================================
 
 const app = express();
@@ -32,6 +34,7 @@ app.use("/api/food", foodRouter);
 app.use("/images" , express.static('uploads'));
 app.use("/api/user", userRouter);
 app.use("/api/cart" , cartRouter);
+app.use("/api/order" , orderRouter);
 
 //===================================================== TEST CONNECTION ==================================================================
 
