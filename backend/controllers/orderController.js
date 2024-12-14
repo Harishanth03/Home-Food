@@ -69,7 +69,27 @@ const placeOrder = async(request , response) => {
 =================================================================================================================================== */
 const verifyOrder = async(request , response) => {
 
-    
+    const {orderId , success} = request.body;
+
+    try 
+    {
+        if(success === "true")
+        {
+            await orderModel.findByIdAndUpdate(orderId , {payment:true})
+            response.json({success:true , message:"Paid"});
+        }
+        else
+        {
+            await orderModel.findByIdAndDelete(orderId);
+            response.json({success:false , message:"Not Paid"})
+        }
+
+    } 
+    catch (error) 
+    {
+        console.log("Error");
+        response.json({success:false , message:"Error"});
+    }
 
 }
 
