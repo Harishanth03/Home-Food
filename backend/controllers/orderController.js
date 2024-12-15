@@ -42,7 +42,7 @@ const placeOrder = async(request , response) => {
                 product_data:{
                     name:"Delivery Charges",
                 },
-                unit_amount:200
+                unit_amount:200 * 100
             },
             quantity:1
         })
