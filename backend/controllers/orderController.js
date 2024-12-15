@@ -99,7 +99,16 @@ const verifyOrder = async(request , response) => {
 
 const userOrders = async(request , response) => {
 
-    
+    try 
+    {
+        const orders = await orderModel.find({userId:request.body.userId});
+        response.json({success:true , data:orders});
+    } 
+    catch (error) 
+    {
+        console.log(error);
+        response.json({success:false , message:"ERROR"});
+    }
 }
 
 export {placeOrder , verifyOrder , userOrders}
