@@ -71,7 +71,7 @@ const Navbar = ({setShowLogin}) => { //set show login is appear that why when us
 
           <ul className="nav-profile-dropdown">
 
-            <li > <img src={assets.bag_icon} alt="" /> <p>Order</p> </li>
+            <li onClick={() => navigate('/myorders')}> <img src={assets.bag_icon} alt="" /> <p>Order</p> </li>
 
             <hr />
 
