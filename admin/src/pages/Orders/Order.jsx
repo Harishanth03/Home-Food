@@ -87,7 +87,7 @@ const Order = ({url}) => {
 
             </div>
 
-            <p>Item Quantity: {order.items.length}</p>
+            <p>Item: {order.items.length}</p>
 
             <p>LKR: {order.amount}</p>
 
