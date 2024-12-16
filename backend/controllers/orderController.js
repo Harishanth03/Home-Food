@@ -111,4 +111,24 @@ const userOrders = async(request , response) => {
     }
 }
 
-export {placeOrder , verifyOrder , userOrders}
+/*===================================================================================================================================
+-------------------------------------------------- Listing Orders for Admin panel ---------------------------------------------------
+=================================================================================================================================== */
+
+const listOrder = async(request , response) => {
+
+    try 
+    {
+        const orders = await orderModel.find({}); // by this .find({}) we can get all the data from orders
+        response.json({success:true , data:orders}); // send all the order data into the browser data as response
+
+    } 
+    catch (error) 
+    {
+        console.log(error);
+        response.json({success:false , message:"Error"});
+    }
+
+}
+
+export {placeOrder , verifyOrder , userOrders , listOrder}
