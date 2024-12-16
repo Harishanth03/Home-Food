@@ -19,7 +19,8 @@ const placeOrder = async(request , response) => {
         const newOrder = new orderModel({
             userId:request.body.userId,
             items:request.body.items,
-            amount:request.body.amount
+            amount:request.body.amount,
+            address:request.body.address
         });
 
         await newOrder.save();
