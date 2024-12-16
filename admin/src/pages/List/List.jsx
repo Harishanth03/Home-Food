@@ -6,7 +6,6 @@ import axios from 'axios';
 
 import { toast } from 'react-toastify';
 
-import { url } from '../../assets/assets';
 
 const List = () => {
 
@@ -38,7 +37,7 @@ const List = () => {
 
   const removeFood = async(food_List) => {
 
-    const response = await axios.post(`${url}/api/food/remove`, {id:food_List});
+    const response = await axios.post(`${GetURL}/api/food/remove`, {id:food_List});
 
     await fetchList();
 
@@ -79,7 +78,7 @@ const List = () => {
 
             <div key={index} className='list-table-format remove'>
 
-              <img src={`${url}/images/` + Item.image} alt="" />
+              <img src={`${GetURL}/images/` + Item.image} alt="" />
 
               <p>{Item.name}</p>
 

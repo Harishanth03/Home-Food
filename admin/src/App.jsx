@@ -11,6 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
+  const url = 'http://localhost:4000';
+
   return (
 
     <div>
@@ -27,13 +29,13 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/' element = {<Add/>}/>
+          <Route path='/' element = {<Add url={url}/>}/>
 
-          <Route path='/add' element = {<Add/>} />
+          <Route path='/add' element = {<Add url={url}/>} />
 
-          <Route path='/list' element = {<List/>} />
+          <Route path='/list' element = {<List url={url}/>} />
 
-          <Route path='/orders' element = {<Order/>} />
+          <Route path='/orders' element = {<Order url={url}/>} />
 
         </Routes>
         
