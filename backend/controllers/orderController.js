@@ -138,7 +138,16 @@ const listOrder = async(request , response) => {
 
 const updateOrderStatus = async(request , response) => 
 {
-    
+    try 
+    {
+        await orderModel.findByIdAndUpdate(request.body.orderId , {status:request.body.status});
+        response.json({success:true , message:"Status Updated"});
+        
+    } catch (error) 
+    {
+        console.log(error);
+        response.json({success:false , message:"Error"});
+    }
 }
 
 export {placeOrder , verifyOrder , userOrders , listOrder , updateOrderStatus}
