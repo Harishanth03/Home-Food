@@ -1,4 +1,4 @@
-import { listOrder, placeOrder, userOrders, verifyOrder } from "../controllers/orderController.js";
+import { listOrder, placeOrder, updateOrderStatus, userOrders, verifyOrder } from "../controllers/orderController.js";
 
 import express from "express"
 
@@ -10,5 +10,6 @@ orderRouter.post("/place" , authMiddleWare , placeOrder);
 orderRouter.post("/verify" , verifyOrder);
 orderRouter.post("/userorders" , authMiddleWare , userOrders); // set middleware to get the userId using the token and use the userId and get the orders
 orderRouter.get("/list" , listOrder);
+orderRouter.post("/status" , updateOrderStatus);
 
 export default orderRouter;

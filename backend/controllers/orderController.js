@@ -132,4 +132,13 @@ const listOrder = async(request , response) => {
 
 }
 
-export {placeOrder , verifyOrder , userOrders , listOrder}
+/*===================================================================================================================================
+---------------------------------------------- Changing Order Status Orders for Admin panel ------------------------------------------
+=================================================================================================================================== */
+
+const updateOrderStatus = async(request , response) => 
+{
+    
+}
+
+export {placeOrder , verifyOrder , userOrders , listOrder , updateOrderStatus}
